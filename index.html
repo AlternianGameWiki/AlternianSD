@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Alternian Smackdown</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <img class src="./images/ASD-Logo.png" />
+    <nav>
+      <ul style>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Characters</a></li>
+        <li><a href="#">Locations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="character-selector">
+      <div class="row">
+
+        <div class="character">
+          <a href="./characters/Amares.html"><img src="./images/Amares.png" alt="Amares Portrait"
+              class="character-icon"></a>
+          <img src="./images/Amares-Full.png" alt="Amares Full" class="character-full">
+          <p class="fnames">Amares</p>
+        </div>
+
+        <div class="character">
+          <a href="./characters/Alamia.html"><img src="./images/Alamia.png" alt="Alamia Portrait"
+              class="character-icon"></a>
+          <img src="./images/Alamia-Full.png" alt="Amares Full" class="character-full">
+          <p class="fnames">Alamia</p>
+        </div>
+
+        <div class="character">
+          <a href="./characters/Cabria.html"><img src="./images/Cabria.png" alt="Cabria Portrait"
+              class="character-icon"></a>
+          <img src="./images/Cabria-Full.png" alt="Amares Full" class="character-full">
+          <p class="fnames">Cabria</p>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="character">
+          <a href="./characters/LaBrujota.html"><img src="./images/Brujota.png" alt="La Brujota Portrait"
+              class="character-icon"></a>
+          <img src="./images/Brujota-Full.png" alt="La Brujota Full" class="character-full">
+          <p class="fnames">Brujota</p>
+        </div>
+
+        <div class="character">
+          <a href="./characters/Amaresfan69.html"><img src="./images/Fan.png" alt="AmaresFan69 Portrait"
+              class="character-icon"></a>
+          <img src="./images/Fan-Full.png" alt="Amares Full" class="character-full">
+          <p class="fnames">AmaFan</p>
+        </div>
+
+        <div class="character">
+          <a href="./characters/Ganhya.html"><img src="./images/Ganhya.png" alt="Ganhya Portrait"
+              class="character-icon"></a>
+          <img src="./images/Amares-Full.png" alt="Amares Full" class="character-full">
+          <p class="fnames">Ganhya</p>
+
+          <script>
+            // save page URL and photo to local storage
+            const pages = JSON.parse(localStorage.getItem('pages')) || [];
+            const newPage = { name: name, url: url, photo: photoUrl };
+            pages.push(newPage);
+            localStorage.setItem('pages', JSON.stringify(pages));
+
+            // create icon for new page
+            const icon = document.createElement('div');
+            icon.classList.add('icon');
+            const img = document.createElement('img');
+            img.src = photoUrl;
+            icon.appendChild(img);
+            const title = document.createElement('p');
+            title.innerText = name;
+            icon.appendChild(title);
+            document.querySelector('.icons-container').appendChild(icon);
+          </script>
+
+          <a href="Addpage.html" style="text-decoration: none; display: ;">
+            <p class="button">ADDPAGE</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>2023 Alternian Smackdown</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
